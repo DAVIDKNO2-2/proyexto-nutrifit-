@@ -14,7 +14,10 @@ app.engine('html', require('ejs').renderFile);
 
 // Routes
 const mainRoutes = require('../routes/main');
+const ejerciciosRoutes = require('../routes/ejercicios');
+
 app.use('/', mainRoutes);
+app.use('/ejercicios', ejerciciosRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

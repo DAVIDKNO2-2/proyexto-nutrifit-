@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Ejercicios</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/ejercicios.css">
+</head>
+<body>
+    <div id="app-wrapper">
+        <!-- Header -->
+        <header id="main-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo-container">
+                        <img src="/imagenes/un-logo-que-diga-nutrifit-con-una-mancuerna-y-un-bicep-flxionado-en-negro.svg" alt="Dumbbell Icon" class="icon" id="header-logo-icon">
+                        <h1>ExerciseDB</h1>
+                    </div>
+                    <div class="header-subtitle">
+                        <img src="/imagenes/un-logo-que-diga-nutrifit-con-una-mancuerna-y-un-bicep-flxionado-en-negro.svg" alt="Heart Icon" class="icon" id="header-heart-icon">
+                        <span>Tu biblioteca de ejercicios</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Search and Filter Section -->
+        <section id="search-filter-section">
+            <div class="container">
+                <h2>Encuentra el ejercicio perfecto para ti</h2>
+                <div class="controls-grid">
+                    <div class="search-input-container">
+                        <img src="/assets/icons/search.svg" alt="Search Icon" class="icon" id="search-icon">
+                        <input type="text" id="search-term" placeholder="Buscar ejercicios...">
+                    </div>
+                    <div class="category-select-container">
+                        <img src="/assets/icons/filter.svg" alt="Filter Icon" class="icon" id="filter-icon">
+                        <select id="category-select">
+                            <option value="all">Todas las categorías</option>
+                        </select>
+                    </div>
+                </div>
+                <p id="results-counter" class="results-counter">Mostrando 0 ejercicios</p>
+            </div>
+        </section>
+
+        <!-- Main Content: Exercise List -->
+        <main id="main-content">
+            <div class="container">
+                <div id="loading-indicator" class="loading-indicator" style="display: none;">
+                    <div class="spinner"></div>
+                    <span>Cargando ejercicios...</span>
+                </div>
+                <div id="error-message" class="error-message" style="display: none;">
+                </div>
+                <div id="exercise-list" class="exercise-grid">
+                </div>
+                <div id="no-results-message" class="no-results" style="display: none;">
+                    <img src="/assets/icons/dumbbell.svg" alt="Dumbbell Icon" class="icon-large" id="no-results-icon">
+                    <h3>No se encontraron ejercicios</h3>
+                    <p>Intenta con otros términos de búsqueda o cambia la categoría</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer id="main-footer">
+            <div class="container">
+                <p>
+                    <img src="/assets/icons/dumbbell.svg" alt="Dumbbell Icon" class="icon" id="footer-dumbbell-icon">
+                    <span>Powered by ExerciseDB API</span>
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/js/ejercicios.js"></script>
+</body>
+</html>

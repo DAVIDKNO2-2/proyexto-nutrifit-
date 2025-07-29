@@ -8,6 +8,9 @@ const authController = require('../controllers/authController');
 // -----------------------------
 // REGISTRO / LOGIN / LOGOUT
 // -----------------------------
+router.get('/', (req, res) => {
+    res.redirect('/login');
+});
 router.post('/register', authController.register);
 router.post('/login', authController.login);
 router.get('/logout', authController.logout);
